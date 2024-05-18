@@ -28,5 +28,44 @@
 如果你想了解更詳細的實作細節，請參考相關資源。1234
 ```
 
+### `提問詞`:請用Python寫出heap sort的演算法
+```python
+def heapify(arr, n, i):
+    largest = i
+    l = 2 * i + 1  # 左子節點 = 2*i + 1
+    r = 2 * i + 2  # 右子節點 = 2*i + 2
 
+    # 如果左子節點存在且大於父節點，則更新最大值的索引
+    if l < n and arr[i] < arr[l]:
+        largest = l
+
+    # 如果右子節點存在且大於父節點，則更新最大值的索引
+    if r < n and arr[largest] < arr[r]:
+        largest = r
+
+    # 如果最大值的索引不是父節點，則交換並重新調整堆積
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]
+        heapify(arr, n, largest)
+
+def heapSort(arr):
+    n = len(arr)
+
+    # 建立最大堆積
+    for i in range(n // 2, -1, -1):
+        heapify(arr, n, i)
+
+    # 逐一提取元素並重新調整堆積
+    for i in range(n - 1, 0, -1):
+        arr[i], arr[0] = arr[0], arr[i]  # 交換根節點和最後一個節點
+        heapify(arr, i, 0)
+
+# 範例使用的數組
+arr = [12, 11, 13, 5, 6, 7]
+heapSort(arr)
+
+print("排序後的數組：")
+for i in range(len(arr)):
+    print(arr[i])
+```
 
