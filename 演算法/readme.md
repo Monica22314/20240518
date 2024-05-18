@@ -70,3 +70,5 @@ for i in range(len(arr)):
 ```
 - Online Python Interpreter
   - [Online Python Compiler (Interpreter) - Programiz](https://www.programiz.com/python-programming/online-compiler/)
+
+![labs_1_1.png](../pics/labs_1_1.png)
