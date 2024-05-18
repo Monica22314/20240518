@@ -8,7 +8,7 @@
 - `提問詞`:請用Rust寫出heap sort的演算法
 - `提問詞`:請用go寫出heap sort的演算法
 - `提問詞`:請用C#寫出heap sort的演算法
-- `提問詞`:請用Javascript#寫出heap sort的演算法
+- `提問詞`:請用Javascript寫出heap sort的演算法
 
 
 ### 提問詞`:請寫出heap sort的演算法
